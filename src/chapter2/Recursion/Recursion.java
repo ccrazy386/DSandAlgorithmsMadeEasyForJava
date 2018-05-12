@@ -1,4 +1,4 @@
-package chapter2.recursion;
+package chapter2.Recursion;
 
 public class Recursion {
     public static void main(String[] args) {
