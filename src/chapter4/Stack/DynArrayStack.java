@@ -1,11 +1,11 @@
 package chapter4.Stack;
 
-public class ArrayStack {
+public class DynArrayStack {
     private int top;
     private int capacity;
     private int[] array;
 
-    public ArrayStack() {
+    public DynArrayStack() {
         this.capacity = 4;
         array = new int [capacity];
         top = -1;
@@ -23,17 +23,21 @@ public class ArrayStack {
 
     public void push(int data) {
         if (isStackFull()) {
-            System.out.println("Stack Overflow");
-        } else {
-            // top을 1씩 증가시키고 데이터를 top 위치에 저장한다.
-            array[++top] = data;
+            doubleStack();
         }
+        array[++top] = data;
+    }
+
+    private void doubleStack() {
+        int newArray[] = new int[capacity * 2];
+        System.arraycopy(array, 0, newArray, 0, capacity);
+        capacity = capacity * 2;
+        array = newArray;
     }
 
     public int pop() {
         if (isEmpty()) {
-            // top == -1은 스택이 비었음을 뜻한다.
-            System.out.println("Stack is Empty");
+            System.out.println("stack Overflow");
             return 0;
         } else {
             return (array[top--]);
@@ -43,4 +47,5 @@ public class ArrayStack {
     public void deleteStack() {
         top = -1;
     }
+
 }
