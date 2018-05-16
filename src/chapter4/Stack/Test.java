@@ -16,5 +16,14 @@ public class Test {
         dynArrStack.push(1);
         dynArrStack.push(4);
 
+        // Linked List Stack test
+        LLStack llStack = new LLStack();
+        llStack.Push(10);
+
+        System.out.println(llStack.isEmpty());
+
+        llStack.deleteStack();
+
+        System.out.println(llStack.isEmpty());
     }
 }
