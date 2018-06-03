@@ -1,4 +1,4 @@
-package chapter5.queue;
+package chapter5.Queue;
 
 import chapter4.Stack.LLNode;
 

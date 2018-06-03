@@ -1,4 +1,4 @@
-package chapter5.queue;
+package chapter5.Queue;
 
 public class DynArrayQueue {
     private Integer front;

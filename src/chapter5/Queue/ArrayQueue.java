@@ -1,4 +1,4 @@
-package chapter5.queue;
+package chapter5.Queue;
 
 public class ArrayQueue {
     private int front;
