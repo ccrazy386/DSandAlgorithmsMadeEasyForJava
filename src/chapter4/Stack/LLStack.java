@@ -33,7 +33,7 @@ public class LLStack extends Stack{
         }
     }
 
-    public Integer pop() {
+    public Object pop() {
         if (headNode == null) {
             throw new EmptyStackException();
         } else {
