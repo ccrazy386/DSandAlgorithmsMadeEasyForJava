@@ -66,6 +66,22 @@ public class BinaryTreeNode {
         return;
     }
 
+    void InOrder (BinaryTreeNode root) {
+        if(root != null) {
+            InOrder(root.getLeft());
+            System.out.println(root.getData());
+            InOrder(root.getRight());
+        }
+    }
+
+    void PostOrder(BinaryTreeNode root) {
+        if(root != null) {
+            PostOrder(root.getLeft());
+            PostOrder(root.getRight());
+            System.out.println(root.getData());
+        }
+    }
+
     public static void main(String[] args) {
         BinaryTreeNode rootNode = new BinaryTreeNode(1);
         BinaryTreeNode node2 = new BinaryTreeNode(2);
@@ -84,6 +100,6 @@ public class BinaryTreeNode {
         node3.setLeft(node6);
         node3.setRight(node7);
 
-        rootNode.PreOrder(rootNode);
+        rootNode.PostOrder(rootNode);
     }
 }
